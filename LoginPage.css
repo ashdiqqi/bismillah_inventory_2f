@@ -1,0 +1,86 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+ background-image: url("img/bckgrnd3.jpg");
+ background-repeat: no-repeat;
+ background-size: 100% auto;
+ height: 800px;
+ 
+}
+.container{
+  position: absolute;
+  top: 60%;
+  left: 75%;
+  transform: translate(-50%,-50%);
+  width: auto;
+}
+.login_page{
+  width: 400px;
+  height: 500px;
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+  font-family: helvetica, sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 7px;
+  box-shadow: -3px -3px 3px #000,
+              3px 3px 5px rgba(94,104,121,0.288);
+}
+.login_page input, label{
+    margin: 10px 20px;
+}
+.login_page input::placeholder{
+  color: #000;
+}
+.login_page input[type="text"],input[type="password"]{
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+  border: 0;
+  padding: 10px;
+}
+.login_page input[type="submit"]{
+  text-align: center;
+  width: 90%;
+  height: 50px;
+  font-size: 20px;
+  outline: none;
+  border: 0;
+  border-radius: 15px;
+  background: blue;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.login_page span{
+  margin-top: -20px;
+  font-size: 18px;
+ margin-left: 170px;
+}
+.login_page .fonts{
+  background-image: url("img/logo.png");
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+  bottom: 20px;
+  margin-left: 150px;
+  }
+.login_page .fas{
+  color: #fff;
+  font-size: 50px;
+  padding-left: 27px;
+  padding-top: 20px;
+}
+.login_page a{
+  text-decoration: none;
+  color: #12A2F3;
+  font-size: 16px;
+  margin-left: 100px;
+}
