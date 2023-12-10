@@ -5,45 +5,55 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Peminjaman Barang dan Ruangan</title>
-	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="../assets/img/icon.ico" type="image/x-icon" />
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Inventory Admin</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<link rel="icon" href="../assets/img/icon.ico" type="image/x-icon"/>
+	
 	<!-- Fonts and icons -->
 	<script src="../assets/js/plugin/webfont/webfont.min.js"></script>
 	<script>
 		WebFont.load({
-			google: { "families": ["Open+Sans:300,400,600,700"] },
-			custom: { "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"], urls: ['../assets/css/fonts.css'] },
-			active: function () {
+			google: {"families":["Open+Sans:300,400,600,700"]},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"], urls: ['../assets/css/fonts.css']},
+			active: function() {
 				sessionStorage.fonts = true;
 			}
 		});
 	</script>
 
+
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../assets/css/azzara.min.css">
+	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="../assets/css/demo.css">
 </head>
-
 <body>
 	<div class="wrapper">
 		<!--
 				Tip 1: You can change the background color of the main header using: data-background-color="blue | purple | light-blue | green | orange | red"
 		-->
-		<div class="main-header" data-background-color="purple" style="margin-top: 0; position: fixed;">
+		<div class="main-header" data-background-color="purple">
 			<!-- Logo Header -->
 			<div class="logo-header">
-
+				
 				<a href="#" class="logo">
 					<img src="../assets/img/logoazzara.svg" alt="navbar brand" class="navbar-brand">
 				</a>
-				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
-					data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
 						<i class="fa fa-bars"></i>
 					</span>
@@ -59,6 +69,7 @@ session_start();
 
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg">
+				
 				<div class="container-fluid">
 					<div class="collapse" id="search-nav">
 						<form class="navbar-left navbar-form nav-search mr-md-3">
@@ -73,100 +84,89 @@ session_start();
 						</form>
 					</div>
 				</div>
-				<div class="sidebar">
-					<div class="sidebar" style="background-color: purple;">
-
-						<div class="sidebar-wrapper scrollbar-inner">
-							<div class="sidebar-content">
-								<ul class="nav">
-									<li class="nav-item">
-										<a href="?view=dashboard">
-											<i class="fas fa-home"></i>
-											<p style="font-size: 24px; font-weight: bold; color: white;">Dashboard</p>
-										</a>
-									</li>
-									<li class="nav-section">
-										<span class="sidebar-mini-icon">
-											<i class="fa fa-ellipsis-h"></i>
-										</span>
-										<h4 class="text-section  color: white;">Components</h4>
-									</li>
-
-									<li class="nav-item">
-										<a href="?view=databarang">
-											<i class="fas fa-briefcase"></i>
-											<p style="font-size: 24px; font-weight: bold;  color: white;">Barang</p>
-										</a>
-									</li>
-
-									<li class="nav-item">
-										<a href="?view=datapinjambarang">
-											<i class="fas fa-newspaper"></i>
-											<p style="font-size: 24px; font-weight: bold;  color: white;">Peminjaman</p>
-										</a>
-									</li>
-
-									<li class="nav-item">
-										<a href="?view=datauser">
-											<i class="fas fa-user-plus"></i>
-											<p style="font-size: 24px; font-weight: bold;  color: white;">Tambah User
-											</p>
-										</a>
-									</li>
-
-									<li class="nav-item">
-										<a href="?view=akun">
-											<i class="fas fa-user"></i>
-											<p style="font-size: 24px; font-weight: bold;  color: white;">Akun Saya</p>
-										</a>
-									</li>
-
-									<li class="nav-item">
-										<a href="../logout.php">
-											<i class="fas fa-power-off"></i>
-											<p style="font-size: 24px; font-weight: bold;  color: white;">Logout</p>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
 			</nav>
 			<!-- End Navbar -->
 		</div>
 		<!-- Sidebar -->
-
+		<div class="sidebar">
+			
+			<div class="sidebar-wrapper scrollbar-inner">
+				<div class="sidebar-content">
+					<ul class="nav">
+						<li class="nav-item">
+							<a href="?view=dashboard">
+								<i class="fas fa-home"></i>
+								<p>Dashboard</p>
+							</a>
+						</li>
+						<li class="nav-section">
+							<span class="sidebar-mini-icon">
+								<i class="fa fa-ellipsis-h"></i>
+							</span>
+							<h4 class="text-section">Components</h4>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#base">
+								<i class="fas fa-layer-group"></i>
+								<p>Data Master</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="base">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="?view=databarang">
+											<span class="sub-item">Barang</span>
+										</a>
+									</li>
+									<li>
+										<a href="?view=datamahasiswa">
+											<span class="sub-item">Mahasiswa</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						
+						<li class="nav-item">
+							<a href="?view=datapinjambarang">
+								<i class="fas fa-briefcase"></i>
+								<p>Pinjam Barang</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="../logout.php">
+								<i class="fas fa-lock"></i>
+								<p>Logout</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 
 		<?php
-		// Dashboard
-		if (@$_GET['view'] == '')
-			include 'dashboard.php';
-		elseif ($_GET['view'] == 'dashboard')
-			include 'dashboard.php';
+                    // Dashboard
+                    if(@$_GET['view']=='')
+                        include 'dashboard.php';
+                    elseif($_GET['view']=='dashboard')
+                        include 'dashboard.php';
 
-		// Tambah Users
-		if (@$_GET['view'] == '')
-			include 'datauser.php';
-		elseif ($_GET['view'] == 'datauser')
-			include 'datauser.php';
+                    // Data Barang
+                    elseif($_GET['view']=='databarang')
+                        include 'master/barang/databarang.php';
+                    
+                    // Data Mahasiswa
+                    elseif($_GET['view']=='datamahasiswa')
+                        include 'master/akun/datamahasiswa.php';
 
-		// Data Peminjaman
-		elseif ($_GET['view'] == 'datapinjambarang')
-			include 'datapinjambarang.php';
-		elseif ($_GET['view'] == 'detailpinjambarang')
-			include '../user/peminjaman/barang/detailpinjambarang.php';
-
-		//data barang
-		elseif ($_GET['view'] == 'databarang')
-			include 'databarang.php';
-
-		//lihat akun
-		elseif ($_GET['view'] == 'akun')
-			include 'akun.php';
-
-		?>
-
-
+                    // Data Peminjaman
+                    elseif($_GET['view']=='datapinjambarang')
+                        include 'peminjaman/datapinjambarang.php';
+                    elseif($_GET['view']=='detailpinjambarang')
+                        include '../user/peminjaman/barang/detailpinjambarang.php';
+                 ?>
+		
+		<!-- Custom template | don't include it in your project! -->
 		<!-- End Custom template -->
 	</div>
 	<!--   Core JS Files   -->
@@ -184,12 +184,13 @@ session_start();
 	<script src="../assets/js/plugin/datatables/datatables.min.js"></script>
 	<!-- Azzara JS -->
 	<script src="../assets/js/ready.min.js"></script>
-	<script>
-		$(document).ready(function () {
+	<!-- Azzara DEMO methods, don't include it in your project! -->
+	<script src="../assets/js/setting-demo.js"></script>
+	<script >
+		$(document).ready(function() {
 			$('#add-row').DataTable({
 			});
 		});
 	</script>
 </body>
-
 </html>
