@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation: isolate" viewBox="0 0 150 35" width="150" height="35">
+    <defs>
+        <clipPath id="_clipPath_Xh4V6OuR0nIpjncOPf0gi3MHgiT7pNOj">
+            <rect width="150" height="35" />
+        </clipPath>
+    </defs>
+    <g clip-path="url(#_clipPath_Xh4V6OuR0nIpjncOPf0gi3MHgiT7pNOj)">
+        <clipPath id="_clipPath_kU7E5JDxgtbp4dcKRToKh4ClgFWK37QV">
+            <rect x="0" y="1" width="150" height="35" transform="matrix(1,0,0,1,0,0)" fill="rgb(255,255,255)" />
+        </clipPath>
+        <g clip-path="url(#_clipPath_kU7E5JDxgtbp4dcKRToKh4ClgFWK37QV)">
+            <g id="Group">
+                <clipPath id="_clipPath_ZwpzGPlNYc5CxxkHFLRp9NgZ2JnJSY7e">
+                    <rect x="0" y="1" width="160" height="40" transform="matrix(1,0,0,1,0,0)" fill="rgb(255,255,255)" />
+                </clipPath>
+                <g clip-path="url(#_clipPath_ZwpzGPlNYc5CxxkHFLRp9NgZ2JnJSY7e)">
+                    <g id="Group">
+                        <g id="Group">
+                            <!-- Mengganti warna teks menjadi #1A9FD7 -->
+                            <text x="10" y="25" font-family="Arial" font-size="20" font-weight="bold" fill="#1A9FD7">Inventaris JTI</text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

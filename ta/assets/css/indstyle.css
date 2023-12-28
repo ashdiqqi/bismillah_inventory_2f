@@ -1,0 +1,40 @@
+body.login {
+    background-image: url('../img/bckgrnd3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+}
+.wrapper-login {
+    height: 80vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+.container-login {
+    background: rgba(250, 250, 250, 0.8);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; 
+    width: 100%; 
+}
+.login-form {
+    max-width: 100%;
+    margin: auto;
+}
+.copyright {
+    text-align: center;
+    color: black;
+    margin-top: 20px; 
+}
+@media (max-width: 768px) {
+    .container-login {
+        padding: 15px;
+    }
+
+    .login-form {
+        max-width: 100%;
+    }
+}
